@@ -70,9 +70,9 @@
 
 ## PRIMARY API ENDPOINTS
 ### 1) Vendor API: 
-    api/vendors/
+    /api/vendors/
 ### 2) Purchase Order API: 
-    api/purchase-orders/  
+    /api/purchase-orders/  
 
 
 ## After creating user to get access token  
