@@ -45,6 +45,9 @@
         - Start the server:
         - python manage.py runserver  
 
+      # 5.Run the test suite:  
+        - python manage.py test
+
 # 2.Access API endpoints:
 
 # PRIMARY API ENDPOINTS
@@ -92,6 +95,4 @@
         POST /api/purchase_orders/{po_id}/acknowledge/  
 
 
-   ## Running Tests  
-   ### -: Run the test suite:  
-      python manage.py test
+  
