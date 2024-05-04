@@ -1,17 +1,13 @@
-import pickle
-
-from django.test import TestCase
-from django.utils import timezone
-from django.urls import reverse
-from rest_framework.utils import json
-
-from .models import PurchaseOrder
-from vendor.models import Vendor
 from datetime import timedelta
-from rest_framework import status
 from django.contrib.auth.models import User
+from django.test import TestCase
+from django.urls import reverse
+from django.utils import timezone
+from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.test import APIClient
+from vendor.models import Vendor
+from .models import PurchaseOrder
 
 
 class PurchaseOrderModelTestCase(TestCase):
@@ -59,7 +55,6 @@ class PurchaseOrderModelTestCase(TestCase):
         po.save()
         po = PurchaseOrder.objects.get(id="1")
         self.assertEqual(po.vendor.name, 'vendor 7')
-
 
     def test_delete_purchase_orders_by_id(self):
         # Testing PO delete

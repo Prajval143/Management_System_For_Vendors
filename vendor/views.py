@@ -18,7 +18,6 @@ class VendorViewSet(viewsets.ModelViewSet):
     def performance(self, request, pk=None):
         # Retrieve the vendor object
         vendor = self.get_object()
-        # Prepare and return performance metrics as a response
         performance_metrics = {
             'vendor_name': vendor.name,
             'on_time_delivery_rate': vendor.on_time_delivery_rate,

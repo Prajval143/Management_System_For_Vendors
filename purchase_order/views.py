@@ -17,17 +17,9 @@ class PurchaseOrderViewSet(viewsets.ModelViewSet):
     def acknowledge(self, request, pk=None):
         """
         Acknowledge a PurchaseOrder by updating its 'acknowledgement_date'.
-
-        Args:
-        - request: HTTP request object.
-        - pk (int): Primary key of the PurchaseOrder instance.
-
-        Returns:
-        - Response: Detailed information of the acknowledged PurchaseOrder.
         """
         purchase_order = self.get_object()
-
-        # Check if the 'acknowledgement_date' is not set
+        # if the 'acknowledgement_date' is not set
         if not purchase_order.acknowledgement_date:
             try:
                 # Set 'acknowledgement_date' to current timestamp
@@ -35,8 +27,6 @@ class PurchaseOrderViewSet(viewsets.ModelViewSet):
                 purchase_order.save()
             except Exception as e:
                 print(e)
-
-        # Construct detailed information of the acknowledged PurchaseOrder
         purchase_order_detail = {
             'purchase_order': purchase_order.po_number,
             'vendor': purchase_order.vendor.name,
@@ -49,5 +39,4 @@ class PurchaseOrderViewSet(viewsets.ModelViewSet):
             'issue_date': purchase_order.issue_date,
             'acknowledgement_date': purchase_order.acknowledgement_date
         }
-
         return Response(purchase_order_detail)

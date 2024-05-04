@@ -30,11 +30,7 @@ def update_vendor_performance(sender, instance, **kwargs):
     if instance.status == 'completed' and instance.delivery_date is None:
         instance.delivery_date = timezone.now()
         instance.save()
-
-    # Update On-Time Delivery Rate
     completed_orders = PurchaseOrder.objects.filter(vendor=instance.vendor, status='completed')
-    # on_time_delivery_rate = completed_orders.filter(delivery_date__lte=instance.delivery_date).count() /
-    # completed_orders.count()
     on_time_deliveries = completed_orders.filter(delivery_date__gte=F('delivery_date'))
     if completed_orders.count() != 0:
         on_time_delivery_rate = on_time_deliveries.count() / completed_orders.count()

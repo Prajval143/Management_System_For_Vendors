@@ -36,8 +36,8 @@ python manage.py runserver
 # 2.Access API endpoints:
 
 # PRIMARY API ENDPOINTS
-Vendor API: /vendor/
-Purchase Order API: /purchase-order/  
+1) Vendor API: /vendor/
+2) Purchase Order API: /purchase-order/  
 
 
 # After creating user to get access token  
