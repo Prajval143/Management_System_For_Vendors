@@ -1,7 +1,7 @@
 # Management System For Vendors
 
    - Application is built using Django and Django-Rest_Framework.
-   - Manges Vendors , Purchase Orders and Vendors Performance by Tracking the Purchase Order
+   - Manages Vendors , Purchase Orders and Vendors Performance by Tracking the Purchase Order
 
 ## Prerequisites :-
  
