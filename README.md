@@ -51,6 +51,7 @@
       # 3.Database setup:
         - python manage.py makemigrations  
         - python manage.py migrate  
+        - python manage.py migrate --run-syncdb
         
       # 4.Create Superuser:
         - python manage.py createsuperuser
