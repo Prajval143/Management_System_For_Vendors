@@ -17,18 +17,29 @@
      - B) Install project in the local machine
 
 ## Common steps :-
+
 ### Clone the repository or Download the zip file:
       bash:  
      - git clone https://github.com/Prajval143/Management_System_For_Vendors.git  
      - cd project-directory (Management_System_For_Vendors)  
 
-# A) Use the project as a Docker Container
+### A) Use the project as a Docker Container
+
     - run command "docker-compose up"
-    # To run test :- 
-    - Open separte terminal / cmd and run following command :-
+    - Open separte terminal / cmd and run following commands :-
+      # To Create Superuser :-
       - docker exec -it Django-Vendor-Management-System /bin/bash
+      - python manage.py createsuperuser
+      - Username: <<Enter the Username>>
+      - Email address: <<Enter the email>>
+      - Password: <<Enter the password>>
+      - Password (again): <<Enter the password again>>
+
+      # To Run Test :-
       - python manage.py test
-# B) Install project in the local machine
+
+### B) Install project in the local machine
+
     # 1.Create a virtual environment and actiavte it using following command:
         - python -m venv venv  
         - source venv/bin/activate  # For Linux/Mac
@@ -40,15 +51,22 @@
       # 3.Database setup:
         - python manage.py makemigrations  
         - python manage.py migrate  
+        
+      # 4.Create Superuser:
+        - python manage.py createsuperuser
+        - Username: <<Enter the Username>>
+        - Email address: <<Enter the email>>
+        - Password: <<Enter the password>>
+        - Password (again): <<Enter the password again>>
 
-      # 4.Usage
+      # 5.Usage
         - Start the server:
         - python manage.py runserver  
 
-      # 5.Run the test suite:  
+      # 6.Run the test suite:  
         - python manage.py test
 
-# 2.Access API endpoints:
+# Access API endpoints:
 
 ## PRIMARY API ENDPOINTS
 ### 1) Vendor API: 
@@ -57,7 +75,7 @@
     /purchase-orders/  
 
 
-# After creating user to get access token  
+## After creating user to get access token  
     - Use API Testing Tool like POSTMAN with URL POST "/api/api-token-auth/"
       and also provide username and password in json .
       e.g. { "username":"superuser","password":"superuser" } to get the token. 
@@ -82,7 +100,7 @@
         GET /api/vendors/{vendor_id}/performance
 
   
-   ## Purchase Order API  
+   ## Purchase Order API :-
    ### -: Create a purchase order 
        POST /api/purchase_orders/
    ### -: List all purchase orders with an option to filter by vendor
