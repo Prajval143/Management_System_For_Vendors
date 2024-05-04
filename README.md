@@ -50,9 +50,11 @@
 
 # 2.Access API endpoints:
 
-# PRIMARY API ENDPOINTS
-1) Vendor API: /vendors/
-2) Purchase Order API: /purchase-orders/  
+## PRIMARY API ENDPOINTS
+### 1) Vendor API: 
+    /vendors/
+### 2) Purchase Order API: 
+    /purchase-orders/  
 
 
 # After creating user to get access token  
