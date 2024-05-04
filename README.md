@@ -56,9 +56,9 @@
 
 
 # After creating user to get access token  
-    - Use API Testing Tool like POSTMAN and URL "http://127.0.0.1:8000/api/api-token-auth/"
-      also provide username and password in json e.g. { "username":"superuser","password":"superuser" } 
-      to get the token. 
+    - Use API Testing Tool like POSTMAN with URL POST "/api/api-token-auth/"
+      and also provide username and password in json .
+      e.g. { "username":"superuser","password":"superuser" } to get the token. 
     - Once Token is created or received provide it to HEADER with key as Authorization 
       (e.g. key : Authorization) and value as token <received-token>  
 
@@ -69,7 +69,7 @@
    ### -: Create a new vendor.
         POST /api/vendors/ 
    ### -: List all vendors.
-        GET /api/vendors/:   
+        GET /api/vendors/   
    ### -: Retrieve a specific vendor's details.
         GET /api/vendors/{vendor_id}/   
    ### -: Update a vendor's details.  
