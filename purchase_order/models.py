@@ -21,6 +21,9 @@ class PurchaseOrder(models.Model):
     acknowledgement_date = models.DateTimeField(null=True, blank=True)
     completion_date = models.DateTimeField(null=True, blank=True)
 
+    def __str__(self):
+        return self.po_number
+
 
 @receiver(post_save, sender=PurchaseOrder)
 def update_vendor_performance(sender, instance, **kwargs):
