@@ -1,26 +1,27 @@
 # Management System For Vendors
 
-- Application is built using Django and Django-Rest_Framework.
-- Manges Vendors , Purchase Orders and Vendors Performance by Tracking the Purchase Order
+   - Application is built using Django and Django-Rest_Framework.
+     - Manges Vendors , Purchase Orders and Vendors Performance by Tracking the Purchase Order
 
-## Prerequisites
+## Prerequisites :-
+ 
+   - Python (version 3.11)
+   - Django (version 5.0.4)
+   - DRF (3.15.1)
+   - Docker (Optional)
 
-- Python (version 3.11)
-- Django (version 5.0.4)
-- DRF (3.15.1)
-- Docker (Optional)
+## Installation :-
 
-## Installation 
+   - Installation can be performed using the two methods :
+     - A) Use the project as a Docker Container
+     - B) Install project in the local machine
 
-- Installation can be performed using the two methods :
-- A) Use the project as a Docker Container
-- B) Install project in the local machine
+## Common steps :-
+### Clone the repository or Download the zip file:
+      bash:  
+     - git clone https://github.com/Prajval143/Management_System_For_Vendors.git  
+     - cd project-directory (Management_System_For_Vendors)  
 
-# Common steps  
-   - Clone the repository or Download the zip file:
-   - bash:  
-   - git clone https://github.com/Prajval143/Management_System_For_Vendors.git  
-   - cd project-directory (Management_System_For_Vendors)  
 # A) Use the project as a Docker Container
     - run command "docker-compose up"
     # To run test :- 
